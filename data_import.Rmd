@@ -14,13 +14,25 @@ Read in the litters dataset.
 ```{r}
 litters_df = read_csv("./data/FAS_litters.csv")
 litters_df = janitor::clean_names(litters_df)
-litters_df %>% head()
 ```
 
 
 ## Take a look at the data
 
-```{r}
+Printing in the console
 
+```{r}
+litters_df
 ```
+
+```{r}
+litters_df %>% head()
+litters_df %>% tail()
+```
+
+### The skim function the skimr package gives you a data summary for dfft variables times
+```{r}
+skimr::skim(litters_df)
+```
+
 
